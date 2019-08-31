@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<div id='output'>
+  <p id='line1'></p>
+  <p id='line2'></p>
+  <p id='line3'></p>
+  <p id='line4'></p>
+  <p id='line5'></p>
+  <p id='line6'></p>
+  <p id='line7'></p>
+  <p id='line8'></p>
+</div>
+
+
+<script>
+    var adv_of_frequency = ['Sometimes','Often','Occasionally','Once in a blue moon','On a harvest moon','On the spring equinox','On the autumnal equinox']
+    var time_of_day = ['night','dawn','midday']
+    var preposition = ['under', 'past','for','away from']
+    var adjective = ['modest\n','scruffy\n','tiny\n','hairy\n','slimey\n','broken\n']
+    var noun = ['bicycle figurine','3D print of a rambutan','depression booklet','anteater stuffed animal','hummingbird']
+    var place = ['on my nightstand,','in my dresser drawer,','between my sheets,','in the window planter box,','behind my bathroom mirror,']
+    var adjective2 = ['an enormous','an ancient','a greying','a mossy','a saggy','a drooling']
+    var noun2 = ['pebble','owl','potato','kidney bean','valerian root','honeycomb','yucca root',]
+
+    
+
+    function randomizer(array_name) {
+        array_name = array_name[Math.floor(Math.random()*array_name.length)];
+        return array_name
+    }
+    
+   setTimeout(function() {        
+    document.getElementById('line1').innerText =  randomizer(adv_of_frequency)
+      },1000)
+    setTimeout(function() {
+    document.getElementById('line2').innerText =  'at ' + randomizer(time_of_day) + ','
+      },2000)
+    setTimeout(function() {
+    document.getElementById('line3').innerText = 'I look ' + randomizer(preposition) + ' the '
+      },3000)
+    setTimeout(function() {
+    document.getElementById('line4').innerText =  randomizer(adjective) + randomizer(noun)
+      },4000)
+    setTimeout(function() {
+    document.getElementById('line5').innerText =  randomizer(place)
+      },5000)
+    setTimeout(function() {
+    document.getElementById('line6').innerText = 'and find \n\ninstead'
+      },10000)
+    setTimeout(function() {
+    document.getElementById('line7').innerText = randomizer(adjective2)
+      },11000)
+    setTimeout(function() {
+    document.getElementById('line8').innerText = randomizer(noun2)
+      },12000)
+
+    
+     preposition[Math.floor(Math.random()*preposition.length)] + ' the \n' + adjective[Math.floor(Math.random()*adjective.length)] + 
+     '\n' + noun[Math.floor(Math.random()*noun.length)] + ' \n' + place[Math.floor(Math.random()*place.length)] + '\n and find \n' + 
+     adjective2[Math.floor(Math.random()*adjective2.length)] + ' ' +noun2[Math.floor(Math.random()*noun2.length)] 
+  
+  </script>
+    
+  </body>
+  </html>
