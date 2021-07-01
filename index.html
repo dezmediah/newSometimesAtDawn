@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head> <meta http-equiv="refresh" content="15"/> </meta> <p></p> <p></p> </head>
+  <head> <meta> </meta> <p></p> <p></p> </head>
 <body>
 <body>
 
@@ -14,13 +14,14 @@
     var adjective2 = ['an enormous','an ancient','a greying','a mossy','a saggy','a drooling']
     var noun2 = ['pebble.','owl.','potato.','kidney bean.','valerian root.','honeycomb.','yucca root.',]
 
-    
+    setInterval(myRefresh, 15000);
 
     function randomizer(array_name) {
         array_name = array_name[Math.floor(Math.random()*array_name.length)];
         return array_name
     }
-  
+    
+   function myRefresh() {
    setTimeout(function() {        
     document.getElementById('line1').innerText =  randomizer(adv_of_frequency)
       },1000)
@@ -70,12 +71,11 @@
     setTimeout(function() {
     document.getElementById('line8').innerText = randomizer(noun2)
       },10000)
+   }
 
    
   </script>
   
-  
-
 <div id='output'>
   <p id='line1'></p>
   <p id='line2'></p>
