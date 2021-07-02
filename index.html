@@ -14,21 +14,14 @@
     var adjective2 = ['an enormous','an ancient','a greying','a mossy','a saggy','a drooling']
     var noun2 = ['pebble.','owl.','potato.','kidney bean.','valerian root.','honeycomb.','yucca root.',]
 
-    setInterval(myRefresh, 15000);
+    
 
     function randomizer(array_name) {
         array_name = array_name[Math.floor(Math.random()*array_name.length)];
         return array_name
     }
    function myRefresh() { 
-      document.getElementbyId('line1').innerText = ''
-      document.getElementbyId('line2').innerText = ''
-      document.getElementbyId('line3').innerText = ''
-      document.getElementbyId('line4').innerText = ''
-      document.getElementbyId('line5').innerText = ''
-      document.getElementbyId('line6').innerText = ''
-      document.getElementbyId('line7').innerText = ''
-      document.getElementbyId('line8').innerText = ''
+     
       setTimeout(function() {        
       document.getElementById('line1').innerText =  randomizer(adv_of_frequency)
         },1000)
@@ -53,9 +46,47 @@
       setTimeout(function() {
       document.getElementById('line8').innerText = randomizer(noun2)
         },10000)
+      
    }
+  function myRepeat() { 
+     
+ document.getElementById('line1').innerText = '';
+      document.getElementById('line2').innerText = ''
+      document.getElementById('line3').innerText = ''
+      document.getElementById('line4').innerText = ''
+      document.getElementById('line5').innerText = ''
+      document.getElementById('line6').innerText = ''
+      document.getElementById('line7').innerText = ''
+      document.getElementById('line8').innerText = ''
+      setTimeout(function() {        
+      document.getElementById('line1').innerText =  randomizer(adv_of_frequency)
+        },1000)
+      setTimeout(function() {
+      document.getElementById('line2').innerText =  'at ' + randomizer(time_of_day) + ','
+        },2000)
+      setTimeout(function() {
+      document.getElementById('line3').innerText = 'I look ' + randomizer(preposition) + ' the '
+        },3000)
+      setTimeout(function() {
+      document.getElementById('line4').innerText =  randomizer(adjective) + randomizer(noun)
+        },4000)
+      setTimeout(function() {
+      document.getElementById('line5').innerText =  randomizer(place)
+        },5000)
+      setTimeout(function() {
+      document.getElementById('line6').innerText = 'and find \n\ninstead'
+        },6000)
+      setTimeout(function() {
+      document.getElementById('line7').innerText = randomizer(adjective2)
+        },8500)
+      setTimeout(function() {
+      document.getElementById('line8').innerText = randomizer(noun2)
+        },10000)
+      
+   }
+   myRefresh();
+  setInterval(myRepeat,15000);
 
-   
   </script>
   
 <div id='output'>
@@ -68,7 +99,3 @@
   <p id='line7'></p>
   <p id='line8'></p>
 </div>
-    
-  </body>
-  </html>
-
