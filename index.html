@@ -21,6 +21,14 @@
         return array_name
     }
    function myRefresh() { 
+      document.getElementbyId('line1').innerText = ''
+      document.getElementbyId('line2').innerText = ''
+      document.getElementbyId('line3').innerText = ''
+      document.getElementbyId('line4').innerText = ''
+      document.getElementbyId('line5').innerText = ''
+      document.getElementbyId('line6').innerText = ''
+      document.getElementbyId('line7').innerText = ''
+      document.getElementbyId('line8').innerText = ''
       setTimeout(function() {        
       document.getElementById('line1').innerText =  randomizer(adv_of_frequency)
         },1000)
@@ -45,15 +53,6 @@
       setTimeout(function() {
       document.getElementById('line8').innerText = randomizer(noun2)
         },10000)
-      
-      document.getElementbyId('line1').innerText = ""
-      document.getElementbyId('line2').innerText = ""
-      document.getElementbyId('line3').innerText = ""
-      document.getElementbyId('line4').innerText = ""
-      document.getElementbyId('line5').innerText = ""
-      document.getElementbyId('line6').innerText = ""
-      document.getElementbyId('line7').innerText = ""
-      document.getElementbyId('line8').innerText = ""
    }
 
    
