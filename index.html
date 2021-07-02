@@ -16,6 +16,7 @@
 
     setInterval(myRefresh, 15000);
 
+
     function randomizer(array_name) {
         array_name = array_name[Math.floor(Math.random()*array_name.length)];
         return array_name
@@ -29,6 +30,7 @@
       document.getElementbyId('line6').innerText = ''
       document.getElementbyId('line7').innerText = ''
       document.getElementbyId('line8').innerText = ''
+
       setTimeout(function() {        
       document.getElementById('line1').innerText =  randomizer(adv_of_frequency)
         },1000)
@@ -53,22 +55,38 @@
       setTimeout(function() {
       document.getElementById('line8').innerText = randomizer(noun2)
         },10000)
-   }
 
-   
+   }
+  function myRepeat() { 
+
+ document.getElementById('line1').innerText = '';
+      document.getElementById('line2').innerText = ''
+      document.getElementById('line3').innerText = ''
+      document.getElementById('line4').innerText = ''
+      document.getElementById('line5').innerText = ''
+      document.getElementById('line6').innerText = ''
+      document.getElementById('line7').innerText = ''
+      document.getElementById('line8').innerText = ''
+      setTimeout(function() {        
+      document.getElementById('line1').innerText =  randomizer(adv_of_frequency)
+        },1000)
+@@ -53,9 +82,11 @@
+      setTimeout(function() {
+      document.getElementById('line8').innerText = randomizer(noun2)
+        },10000)
+
+   }
+   myRefresh();
+  setInterval(myRepeat,15000);
+
+
   </script>
-  
+
 <div id='output'>
-  <p id='line1'></p>
-  <p id='line2'></p>
-  <p id='line3'></p>
-  <p id='line4'></p>
-  <p id='line5'></p>
-  <p id='line6'></p>
+@@ -68,7 +99,3 @@
   <p id='line7'></p>
   <p id='line8'></p>
 </div>
-    
+
   </body>
   </html>
-
