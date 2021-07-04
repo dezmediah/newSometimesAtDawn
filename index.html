@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <head> <meta> </meta> <p></p> <p></p> </head>
+<head> 
+  <meta> </meta> 
+  <p></p> <p></p> 
+</head>
 <body>
 <script>
     var adv_of_frequency = ['Sometimes','Often','Occasionally','Once in a blue moon','On a harvest moon','On the spring equinox','On the autumnal equinox']
@@ -33,20 +36,17 @@
       document.getElementById('line5').innerText =  randomizer(place)
         },5000)
       setTimeout(function() {
-      document.getElementById('line6').innerText = 'and find'
+      document.getElementById('line6').innerText = 'and find \n\ninstead'
         },6500)
       setTimeout(function() {
-      document.getElementById('line7').innerText = 'instead'
-        },7000)
+      document.getElementById('line7').innerText = randomizer(adjective2)
+        },9000)
       setTimeout(function() {
-      document.getElementById('line8').innerText = randomizer(adjective2)
-        },9500)
-      setTimeout(function() {
-      document.getElementById('line9').innerText = randomizer(noun2)
-        },11000)
+      document.getElementById('line8').innerText = randomizer(noun2)
+        },10500)
    }
   function myRepeat() { 
-      document.getElementById('line1').innerText = '';
+      document.getElementById('line1').innerText = ''
       document.getElementById('line2').innerText = ''
       document.getElementById('line3').innerText = ''
       document.getElementById('line4').innerText = ''
@@ -54,7 +54,6 @@
       document.getElementById('line6').innerText = ''
       document.getElementById('line7').innerText = ''
       document.getElementById('line8').innerText = ''
-      document.getElementById('line9').innerText = ''
       myRefresh()
    }
    myRefresh();
@@ -71,7 +70,6 @@
   <p id='line6'></p>
   <p id='line7'></p>
   <p id='line8'></p>
-  <p id='line9'></p>
 </div>
 </body>
 </html>
