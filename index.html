@@ -17,7 +17,6 @@
         return array_name
     }
    function myRefresh() { 
-
       setTimeout(function() {        
       document.getElementById('line1').innerText =  randomizer(adv_of_frequency)
         },1000)
@@ -42,11 +41,9 @@
       setTimeout(function() {
       document.getElementById('line8').innerText = randomizer(noun2)
         },10000)
-
    }
   function myRepeat() { 
-
- document.getElementById('line1').innerText = '';
+      document.getElementById('line1').innerText = '';
       document.getElementById('line2').innerText = ''
       document.getElementById('line3').innerText = ''
       document.getElementById('line4').innerText = ''
@@ -54,31 +51,7 @@
       document.getElementById('line6').innerText = ''
       document.getElementById('line7').innerText = ''
       document.getElementById('line8').innerText = ''
-      setTimeout(function() {        
-      document.getElementById('line1').innerText =  randomizer(adv_of_frequency)
-        },1000)
-      setTimeout(function() {
-      document.getElementById('line2').innerText =  'at ' + randomizer(time_of_day) + ','
-        },2000)
-      setTimeout(function() {
-      document.getElementById('line3').innerText = 'I look ' + randomizer(preposition) + ' the '
-        },3000)
-      setTimeout(function() {
-      document.getElementById('line4').innerText =  randomizer(adjective) + randomizer(noun)
-        },4000)
-      setTimeout(function() {
-      document.getElementById('line5').innerText =  randomizer(place)
-        },5000)
-      setTimeout(function() {
-      document.getElementById('line6').innerText = 'and find \n\ninstead'
-        },6000)
-      setTimeout(function() {
-      document.getElementById('line7').innerText = randomizer(adjective2)
-        },8500)
-      setTimeout(function() {
-      document.getElementById('line8').innerText = randomizer(noun2)
-        },10000)
-
+      myRefresh()
    }
    myRefresh();
   setInterval(myRepeat,15000);
